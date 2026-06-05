@@ -10,10 +10,9 @@ readme = "README.md"
 authors = [
     { name = "Tushar Sharma", email = "tushar@example.com" }
 ]
-license = { text = "MIT" }
+license = "MIT"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Topic :: Scientific/Engineering :: Medical Science Apps."
 ]
@@ -57,3 +56,7 @@ line-ending = "auto"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
+
+[tool.setuptools]
+packages = ["utils"]
+
