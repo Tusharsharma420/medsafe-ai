@@ -74,7 +74,7 @@ def get_symptom_guidance(age, gender, medicines, experience):
                 guidance_split = text.split("GUIDANCE:")
                 if len(guidance_split) > 1:
                     guidance = guidance_split[1].strip()
-            except:
+            except Exception:
                 pass
                 
         return guidance, risk_level

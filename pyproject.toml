@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medsafe-ai"
+version = "1.0.0"
+description = "An AI-driven medical safety assistant for healthcare professionals."
+readme = "README.md"
+authors = [
+    { name = "Tushar Sharma", email = "tushar@example.com" }
+]
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Medical Science Apps."
+]
+requires-python = ">=3.10"
+dependencies = [
+    "streamlit>=1.30.0",
+    "google-generativeai>=0.3.0",
+    "thefuzz>=0.20.0",
+    "python-dotenv>=1.0.0",
+    "pandas>=2.0.0",
+    "pillow>=10.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.1.0",
+    "pytest>=7.0.0",
+    "pytest-mock>=3.10.0",
+    "pip-audit>=2.6.0"
+]
+
+[tool.ruff.lint]
+# Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`) codes by default.
+select = ["E4", "E7", "E9", "F"]
+ignore = []
+
+[tool.ruff]
+# Allow fix behavior.
+fix = true
+
+# Same as Black.
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

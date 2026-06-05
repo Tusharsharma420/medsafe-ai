@@ -1,31 +1,34 @@
 ---
-name: Bug report
-about: Create a report to help us improve
-title: '[BUG] '
-labels: bug
-assignees: ''
+name: "🐛 Bug Report"
+about: "Report a bug or unexpected behavior in MedSafe AI"
+title: "[BUG]: "
+labels: ["bug"]
+assignees: ""
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+### 🚨 Description of the Bug
+Provide a clear, concise description of what the bug is, including the expected vs actual behavior.
 
-**To Reproduce**
+### 🧪 Steps to Reproduce
 Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+1. Launch Streamlit locally (`streamlit run app.py`).
+2. Go to the page '...'
+3. Perform action '....' (e.g. upload a specific prescription format / input specific medication combo)
+4. Observe error: `...`
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+### 💻 Environment Configuration
+Please provide your local runtime environment details:
+- **OS**: [e.g. Windows 11, macOS Sequoia, Ubuntu 22.04]
+- **Python Version**: [e.g. 3.10.12]
+- **Streamlit Version**: [e.g. 1.30.0]
+- **Gemini API Model used**: [e.g. `gemini-2.5-flash`, `gemini-1.5-pro`]
+- **Browser**: [e.g. Chrome, Safari, Firefox]
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+### 📋 Error Log & Traceback
+If applicable, paste the terminal or Streamlit UI error stack trace here:
+```text
+Paste error traceback here
+```
 
-**Desktop/Mobile (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser/App Version: [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+### 🖼 Screenshots & Evidence
+If applicable, add screenshots or screen recordings to help demonstrate the visual layout or API timeout issues.
