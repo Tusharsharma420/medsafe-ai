@@ -16,8 +16,19 @@ Log your experience here for AI-driven educational guidance, home remedies, and 
 
 st.markdown("---")
 st.warning(
-    "**Disclaimer:** MedSafe AI provides educational information. It is NOT diagnostic and cannot replace a medical professional. If you are experiencing a severe emergency, call your local emergency services."
+    "**Disclaimer:** MedSafe AI provides educational information. It is NOT diagnostic and cannot replace a medical professional. "
+    "If you are experiencing a severe emergency, call your local emergency services immediately."
 )
+
+# Quick-fill symptom buttons
+st.markdown("**Quick-fill common symptoms:**")
+symptom_cols = st.columns(5)
+QUICK_SYMPTOMS = ["Headache", "Nausea", "Dizziness", "Fatigue", "Chest pain"]
+quick_symptom = None
+for i, symptom in enumerate(QUICK_SYMPTOMS):
+    with symptom_cols[i]:
+        if st.button(symptom, key=f"quick_{i}", use_container_width=True):
+            quick_symptom = symptom
 
 with st.form("symptom_form"):
     st.markdown("#### Patient Profile")
@@ -30,17 +41,20 @@ with st.form("symptom_form"):
     st.markdown("#### Medication History")
     medicines = st.text_input(
         "What medicines have you recently taken? (Comma separated)",
-        placeholder="e.g. Paracetamol, Lisinopril",
+        placeholder="e.g. Paracetamol, Lisinopril, Aspirin",
     )
 
     st.markdown("#### Your Experience")
+    # Pre-fill from quick-fill button if clicked
+    default_experience = quick_symptom if quick_symptom else ""
     experience = st.text_area(
         "Describe what you are feeling or experiencing in detail.",
+        value=default_experience,
         placeholder="e.g. I took my blood pressure medication an hour ago and now I have a mild headache and feel slightly dizzy when I stand up.",
         height=150,
     )
 
-    submit_button = st.form_submit_button("Analyze Symptoms", type="primary")
+    submit_button = st.form_submit_button("🔍 Analyze Symptoms", type="primary")
 
 if submit_button:
     if not experience.strip():
@@ -52,21 +66,44 @@ if submit_button:
             st.markdown("---")
             st.subheader("MedSafe AI Analysis")
 
-            # Risk Level Badge
-            risk_color = "green"
-            if risk_level.upper() == "MEDIUM":
-                risk_color = "orange"
-            elif risk_level.upper() == "HIGH":
+            # Risk Level Badge with icons
+            rl = risk_level.upper()
+            if rl == "HIGH":
                 risk_color = "red"
+                risk_emoji = "🔴"
+                risk_label = "HIGH RISK"
+            elif rl == "MEDIUM":
+                risk_color = "orange"
+                risk_emoji = "🟠"
+                risk_label = "MEDIUM RISK"
+            elif rl == "LOW":
+                risk_color = "green"
+                risk_emoji = "🟢"
+                risk_label = "LOW RISK"
+            else:
+                risk_color = "gray"
+                risk_emoji = "⚪"
+                risk_label = "UNKNOWN"
 
             st.markdown(
-                f"### Emergency Risk Predictor: <span style='color:{risk_color}; font-weight:bold;'>{risk_level.upper()}</span>",
+                f"### Emergency Risk Assessment: {risk_emoji} <span style='color:{risk_color}; font-weight:bold;'>{risk_label}</span>",
                 unsafe_allow_html=True,
             )
 
-            if risk_level.upper() == "HIGH":
+            if rl == "HIGH":
                 st.error(
-                    "🚨 **High Risk Detected:** Your symptoms suggest a potentially serious issue. Please seek professional medical attention or go to an emergency room immediately."
+                    "🚨 **High Risk Detected:** Your symptoms suggest a potentially serious issue. "
+                    "Please seek professional medical attention or go to an emergency room immediately."
+                )
+            elif rl == "MEDIUM":
+                st.warning(
+                    "⚠️ **Medium Risk:** Your symptoms warrant attention. Consider contacting your doctor soon, "
+                    "especially if symptoms worsen or don't improve."
+                )
+            else:
+                st.success(
+                    "✅ **Low Risk:** Your symptoms appear relatively mild. Monitor your condition and consult "
+                    "a healthcare professional if symptoms persist or worsen."
                 )
 
             st.markdown("#### Guidance & Education")
