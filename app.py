@@ -81,6 +81,7 @@ st.markdown("""
     .bg-blue { background-color: #c9ebf2 !important; }
     .bg-yellow { background-color: #fceea6 !important; }
     .bg-white { background-color: #ffffff !important; }
+    .bg-purple { background-color: #e8d5f5 !important; }
 
     /* Dashboard text */
     .dash-label {
@@ -164,7 +165,8 @@ pg = st.navigation([
     st.Page("views/dashboard.py", title="Dashboard", icon="🏠", default=True),
     st.Page("views/interaction_checker.py", title="Interaction Checker", icon="💊", url_path="interaction_checker"),
     st.Page("views/prescription_ocr.py", title="Prescription OCR", icon="📄", url_path="prescription_ocr"),
-    st.Page("views/symptom_solver.py", title="Symptom Solver", icon="🩺", url_path="symptom_solver")
+    st.Page("views/symptom_solver.py", title="Symptom Solver", icon="🩺", url_path="symptom_solver"),
+    st.Page("views/medicine_info.py", title="Medicine Info", icon="🔬", url_path="medicine_info"),
 ])
 pg.run()
 

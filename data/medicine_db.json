@@ -2,35 +2,27 @@
   {
     "name": "Aspirin",
     "active_salt": "Acetylsalicylic acid",
-    "uses": "Pain relief, fever reduction, anti-inflammatory",
+    "uses": "Pain relief, fever reduction, anti-inflammatory, cardioprotection",
     "interactions": [
-      {
-        "interacting_drug_salt": "Warfarin",
-        "severity": "High",
-        "description": "Increased risk of bleeding."
-      },
-      {
-        "interacting_drug_salt": "Ibuprofen",
-        "severity": "Moderate",
-        "description": "May reduce the cardioprotective effects of Aspirin."
-      }
+      { "interacting_drug_salt": "Warfarin", "severity": "High", "description": "Significantly increases risk of bleeding, including internal hemorrhage." },
+      { "interacting_drug_salt": "Ibuprofen", "severity": "Moderate", "description": "May reduce the cardioprotective effects of Aspirin and increase GI bleed risk." },
+      { "interacting_drug_salt": "Methotrexate", "severity": "High", "description": "Aspirin can reduce renal clearance of Methotrexate, increasing its toxicity." },
+      { "interacting_drug_salt": "Clopidogrel bisulfate", "severity": "Moderate", "description": "Combined antiplatelet effect increases bleeding risk, though sometimes used intentionally under supervision." },
+      { "interacting_drug_salt": "Sertraline hydrochloride", "severity": "Moderate", "description": "Combined use increases risk of gastrointestinal bleeding." }
     ]
   },
   {
     "name": "Warfarin",
     "active_salt": "Warfarin sodium",
-    "uses": "Blood thinning, preventing blood clots",
+    "uses": "Blood thinning, preventing blood clots, atrial fibrillation",
     "interactions": [
-      {
-        "interacting_drug_salt": "Acetylsalicylic acid",
-        "severity": "High",
-        "description": "Increased risk of bleeding."
-      },
-      {
-        "interacting_drug_salt": "Acetaminophen",
-        "severity": "Moderate",
-        "description": "High doses may increase the effects of warfarin."
-      }
+      { "interacting_drug_salt": "Acetylsalicylic acid", "severity": "High", "description": "Significantly increases risk of bleeding, including internal hemorrhage." },
+      { "interacting_drug_salt": "Acetaminophen", "severity": "Moderate", "description": "High or regular doses of Paracetamol can potentiate warfarin's anticoagulant effect." },
+      { "interacting_drug_salt": "Clarithromycin", "severity": "High", "description": "Clarithromycin inhibits CYP3A4, dramatically increasing Warfarin levels and bleeding risk." },
+      { "interacting_drug_salt": "Ciprofloxacin hydrochloride", "severity": "High", "description": "Ciprofloxacin inhibits Warfarin metabolism, increasing INR and bleeding risk." },
+      { "interacting_drug_salt": "Omeprazole", "severity": "Moderate", "description": "Omeprazole can increase Warfarin plasma levels via CYP2C19 inhibition." },
+      { "interacting_drug_salt": "Atorvastatin", "severity": "Moderate", "description": "Atorvastatin may enhance Warfarin's anticoagulant effects." },
+      { "interacting_drug_salt": "Sertraline hydrochloride", "severity": "Moderate", "description": "Sertraline can enhance Warfarin's anticoagulant effects; INR should be monitored." }
     ]
   },
   {
@@ -38,40 +30,27 @@
     "active_salt": "Acetaminophen",
     "uses": "Pain relief, fever reduction",
     "interactions": [
-      {
-        "interacting_drug_salt": "Warfarin sodium",
-        "severity": "Moderate",
-        "description": "High doses may increase the effects of warfarin."
-      }
+      { "interacting_drug_salt": "Warfarin sodium", "severity": "Moderate", "description": "High doses may increase anticoagulant effects of Warfarin." },
+      { "interacting_drug_salt": "Methotrexate", "severity": "Moderate", "description": "May increase Methotrexate toxicity when used at high doses." }
     ]
   },
   {
     "name": "Amoxicillin",
     "active_salt": "Amoxicillin trihydrate",
-    "uses": "Bacterial infection treatment",
+    "uses": "Bacterial infections, pneumonia, ear infections, urinary tract infections",
     "interactions": [
-      {
-        "interacting_drug_salt": "Methotrexate",
-        "severity": "High",
-        "description": "May increase methotrexate toxicity."
-      }
+      { "interacting_drug_salt": "Methotrexate", "severity": "High", "description": "May increase Methotrexate toxicity by reducing its renal excretion." },
+      { "interacting_drug_salt": "Warfarin sodium", "severity": "Moderate", "description": "Antibiotics can disrupt gut flora affecting Vitamin K production and enhance Warfarin." }
     ]
   },
   {
     "name": "Lisinopril",
     "active_salt": "Lisinopril",
-    "uses": "High blood pressure treatment",
+    "uses": "High blood pressure, heart failure, post-heart attack treatment",
     "interactions": [
-      {
-        "interacting_drug_salt": "Potassium",
-        "severity": "High",
-        "description": "Risk of hyperkalemia (high blood potassium)."
-      },
-      {
-        "interacting_drug_salt": "Ibuprofen",
-        "severity": "Moderate",
-        "description": "May reduce blood pressure lowering effect."
-      }
+      { "interacting_drug_salt": "Potassium", "severity": "High", "description": "Risk of hyperkalemia (dangerously high blood potassium levels)." },
+      { "interacting_drug_salt": "Ibuprofen", "severity": "Moderate", "description": "NSAIDs like Ibuprofen can reduce blood pressure-lowering effect of Lisinopril and worsen kidney function." },
+      { "interacting_drug_salt": "Spironolactone", "severity": "High", "description": "Combined use significantly increases risk of hyperkalemia." }
     ]
   },
   {
@@ -79,52 +58,212 @@
     "active_salt": "Ibuprofen",
     "uses": "Pain relief, fever reduction, anti-inflammatory",
     "interactions": [
-      {
-        "interacting_drug_salt": "Lisinopril",
-        "severity": "Moderate",
-        "description": "May reduce blood pressure lowering effect."
-      },
-      {
-        "interacting_drug_salt": "Acetylsalicylic acid",
-        "severity": "Moderate",
-        "description": "May reduce the cardioprotective effects of Aspirin."
-      }
+      { "interacting_drug_salt": "Lisinopril", "severity": "Moderate", "description": "May reduce blood pressure-lowering effect and worsen kidney function." },
+      { "interacting_drug_salt": "Acetylsalicylic acid", "severity": "Moderate", "description": "May reduce the cardioprotective effects of Aspirin and increase GI bleeding risk." },
+      { "interacting_drug_salt": "Warfarin sodium", "severity": "High", "description": "Increases bleeding risk significantly; avoid combination." },
+      { "interacting_drug_salt": "Metformin hydrochloride", "severity": "Moderate", "description": "NSAIDs can impair renal function and increase risk of lactic acidosis with Metformin." },
+      { "interacting_drug_salt": "Sertraline hydrochloride", "severity": "Moderate", "description": "Combined use increases risk of gastrointestinal bleeding." },
+      { "interacting_drug_salt": "Prednisone", "severity": "High", "description": "Combined use greatly increases risk of gastrointestinal ulcers and bleeding." }
     ]
   },
   {
     "name": "Metformin",
     "active_salt": "Metformin hydrochloride",
-    "uses": "Type 2 diabetes treatment",
+    "uses": "Type 2 diabetes management, blood sugar control",
     "interactions": [
-      {
-        "interacting_drug_salt": "Ibuprofen",
-        "severity": "Moderate",
-        "description": "May increase the risk of lactic acidosis."
-      }
+      { "interacting_drug_salt": "Ibuprofen", "severity": "Moderate", "description": "NSAIDs can reduce kidney function and increase risk of lactic acidosis with Metformin." },
+      { "interacting_drug_salt": "Ciprofloxacin hydrochloride", "severity": "Moderate", "description": "Ciprofloxacin can alter blood glucose levels, complicating diabetes management." },
+      { "interacting_drug_salt": "Furosemide", "severity": "Moderate", "description": "Furosemide may increase Metformin levels and lactic acidosis risk via renal effects." }
     ]
   },
   {
     "name": "Prilosec",
     "active_salt": "Omeprazole",
-    "uses": "Acid reflux, GERD treatment",
+    "uses": "Acid reflux, GERD, peptic ulcer treatment",
     "interactions": [
-      {
-        "interacting_drug_salt": "Clopidogrel",
-        "severity": "High",
-        "description": "May reduce the effectiveness of Clopidogrel (blood thinner)."
-      }
+      { "interacting_drug_salt": "Clopidogrel bisulfate", "severity": "High", "description": "Omeprazole reduces the antiplatelet effectiveness of Clopidogrel, increasing cardiovascular risk." },
+      { "interacting_drug_salt": "Warfarin sodium", "severity": "Moderate", "description": "Can increase Warfarin plasma levels via CYP2C19 inhibition." },
+      { "interacting_drug_salt": "Methotrexate", "severity": "Moderate", "description": "May increase Methotrexate levels by reducing renal clearance." }
     ]
   },
   {
     "name": "Lipitor",
     "active_salt": "Atorvastatin",
-    "uses": "Cholesterol lowering",
+    "uses": "Cholesterol lowering, cardiovascular risk reduction",
     "interactions": [
-      {
-        "interacting_drug_salt": "Clarithromycin",
-        "severity": "High",
-        "description": "May increase risk of muscle damage (myopathy/rhabdomyolysis)."
-      }
+      { "interacting_drug_salt": "Clarithromycin", "severity": "High", "description": "Clarithromycin inhibits CYP3A4 enzyme, causing Atorvastatin levels to rise dramatically, increasing risk of muscle damage (myopathy/rhabdomyolysis)." },
+      { "interacting_drug_salt": "Warfarin sodium", "severity": "Moderate", "description": "Atorvastatin may enhance Warfarin's anticoagulant effect." },
+      { "interacting_drug_salt": "Amlodipine", "severity": "Moderate", "description": "Amlodipine increases Atorvastatin exposure; dose adjustments may be needed." }
+    ]
+  },
+  {
+    "name": "Methotrexate",
+    "active_salt": "Methotrexate",
+    "uses": "Cancer treatment, rheumatoid arthritis, psoriasis",
+    "interactions": [
+      { "interacting_drug_salt": "Acetylsalicylic acid", "severity": "High", "description": "Aspirin reduces renal clearance of Methotrexate, causing toxic accumulation." },
+      { "interacting_drug_salt": "Amoxicillin trihydrate", "severity": "High", "description": "Antibiotics can reduce Methotrexate clearance, increasing toxicity risk." },
+      { "interacting_drug_salt": "Acetaminophen", "severity": "Moderate", "description": "High-dose Paracetamol may increase Methotrexate toxicity." },
+      { "interacting_drug_salt": "Omeprazole", "severity": "Moderate", "description": "Proton pump inhibitors may reduce Methotrexate renal clearance." },
+      { "interacting_drug_salt": "Ibuprofen", "severity": "High", "description": "NSAIDs reduce Methotrexate excretion, leading to dangerous toxicity." }
+    ]
+  },
+  {
+    "name": "Plavix",
+    "active_salt": "Clopidogrel bisulfate",
+    "uses": "Antiplatelet, stroke prevention, heart attack prevention",
+    "interactions": [
+      { "interacting_drug_salt": "Omeprazole", "severity": "High", "description": "Omeprazole inhibits CYP2C19, reducing Clopidogrel activation and antiplatelet effect." },
+      { "interacting_drug_salt": "Acetylsalicylic acid", "severity": "Moderate", "description": "Dual antiplatelet therapy increases bleeding risk; used under supervision." }
+    ]
+  },
+  {
+    "name": "Zithromax",
+    "active_salt": "Clarithromycin",
+    "uses": "Bacterial infections, respiratory infections, H. pylori treatment",
+    "interactions": [
+      { "interacting_drug_salt": "Warfarin sodium", "severity": "High", "description": "Inhibits CYP3A4 causing Warfarin toxicity and dramatically elevated INR." },
+      { "interacting_drug_salt": "Atorvastatin", "severity": "High", "description": "Inhibits CYP3A4, dramatically increasing statin levels and myopathy risk." },
+      { "interacting_drug_salt": "Digoxin", "severity": "High", "description": "Clarithromycin increases Digoxin levels, risk of Digoxin toxicity." }
+    ]
+  },
+  {
+    "name": "Lasix",
+    "active_salt": "Furosemide",
+    "uses": "Edema, heart failure, high blood pressure, fluid retention",
+    "interactions": [
+      { "interacting_drug_salt": "Digoxin", "severity": "High", "description": "Furosemide-induced hypokalemia increases risk of Digoxin toxicity and arrhythmias." },
+      { "interacting_drug_salt": "Metformin hydrochloride", "severity": "Moderate", "description": "May increase Metformin plasma levels and risk of lactic acidosis." },
+      { "interacting_drug_salt": "Lisinopril", "severity": "Moderate", "description": "Combination may cause excessive blood pressure reduction (hypotension)." }
+    ]
+  },
+  {
+    "name": "Lanoxin",
+    "active_salt": "Digoxin",
+    "uses": "Heart failure, atrial fibrillation, rate control",
+    "interactions": [
+      { "interacting_drug_salt": "Clarithromycin", "severity": "High", "description": "Clarithromycin increases Digoxin levels significantly, risking toxicity (nausea, arrhythmias, visual disturbances)." },
+      { "interacting_drug_salt": "Furosemide", "severity": "High", "description": "Furosemide-induced low potassium sensitizes the heart to Digoxin, increasing toxicity risk." },
+      { "interacting_drug_salt": "Amiodarone", "severity": "High", "description": "Amiodarone inhibits Digoxin elimination; dose reduction required." }
+    ]
+  },
+  {
+    "name": "Cipro",
+    "active_salt": "Ciprofloxacin hydrochloride",
+    "uses": "Bacterial infections, urinary tract infections, respiratory infections",
+    "interactions": [
+      { "interacting_drug_salt": "Warfarin sodium", "severity": "High", "description": "Ciprofloxacin inhibits Warfarin metabolism, increasing INR and bleeding risk." },
+      { "interacting_drug_salt": "Metformin hydrochloride", "severity": "Moderate", "description": "Can alter blood glucose levels; monitor closely in diabetic patients." },
+      { "interacting_drug_salt": "Digoxin", "severity": "Moderate", "description": "May increase Digoxin absorption and toxicity risk." }
+    ]
+  },
+  {
+    "name": "Zoloft",
+    "active_salt": "Sertraline hydrochloride",
+    "uses": "Depression, anxiety disorders, OCD, PTSD",
+    "interactions": [
+      { "interacting_drug_salt": "Acetylsalicylic acid", "severity": "Moderate", "description": "Combined antiplatelet and anticoagulant effects increase GI bleeding risk." },
+      { "interacting_drug_salt": "Ibuprofen", "severity": "Moderate", "description": "SSRIs combined with NSAIDs significantly increase GI bleeding risk." },
+      { "interacting_drug_salt": "Warfarin sodium", "severity": "Moderate", "description": "Sertraline can enhance Warfarin's anticoagulant effect; INR monitoring required." },
+      { "interacting_drug_salt": "Tramadol", "severity": "High", "description": "Risk of serotonin syndrome — potentially life-threatening." }
+    ]
+  },
+  {
+    "name": "Norvasc",
+    "active_salt": "Amlodipine",
+    "uses": "High blood pressure, angina, coronary artery disease",
+    "interactions": [
+      { "interacting_drug_salt": "Atorvastatin", "severity": "Moderate", "description": "Amlodipine increases Atorvastatin exposure by approximately 18%; monitor for muscle pain." },
+      { "interacting_drug_salt": "Simvastatin", "severity": "High", "description": "Amlodipine increases Simvastatin levels significantly; Simvastatin dose capped at 20mg when combined." },
+      { "interacting_drug_salt": "Lisinopril", "severity": "Low", "description": "Additive blood pressure lowering; generally beneficial but monitor for hypotension." }
+    ]
+  },
+  {
+    "name": "Zocor",
+    "active_salt": "Simvastatin",
+    "uses": "Cholesterol reduction, cardiovascular risk prevention",
+    "interactions": [
+      { "interacting_drug_salt": "Amlodipine", "severity": "High", "description": "Amlodipine increases Simvastatin blood levels, significantly raising myopathy risk." },
+      { "interacting_drug_salt": "Clarithromycin", "severity": "High", "description": "CYP3A4 inhibition by Clarithromycin causes dangerous Simvastatin accumulation." },
+      { "interacting_drug_salt": "Warfarin sodium", "severity": "Moderate", "description": "Simvastatin may enhance Warfarin's anticoagulant effects." }
+    ]
+  },
+  {
+    "name": "Tenormin",
+    "active_salt": "Atenolol",
+    "uses": "High blood pressure, angina, heart arrhythmias",
+    "interactions": [
+      { "interacting_drug_salt": "Metformin hydrochloride", "severity": "Moderate", "description": "Beta-blockers can mask symptoms of hypoglycemia in diabetics taking Metformin." },
+      { "interacting_drug_salt": "Amlodipine", "severity": "Moderate", "description": "Additive blood pressure reduction; monitor for excessive hypotension." },
+      { "interacting_drug_salt": "Furosemide", "severity": "Low", "description": "May have additive blood pressure lowering; monitor." }
+    ]
+  },
+  {
+    "name": "Deltasone",
+    "active_salt": "Prednisone",
+    "uses": "Anti-inflammatory, immunosuppression, allergic reactions, asthma",
+    "interactions": [
+      { "interacting_drug_salt": "Ibuprofen", "severity": "High", "description": "Combined use greatly increases risk of gastrointestinal ulcers and GI bleeding." },
+      { "interacting_drug_salt": "Metformin hydrochloride", "severity": "Moderate", "description": "Prednisone raises blood glucose; may reduce effectiveness of Metformin in diabetics." },
+      { "interacting_drug_salt": "Warfarin sodium", "severity": "Moderate", "description": "Corticosteroids can alter Warfarin response; INR monitoring required." },
+      { "interacting_drug_salt": "Ciprofloxacin hydrochloride", "severity": "Moderate", "description": "Combined use increases tendon rupture risk." }
+    ]
+  },
+  {
+    "name": "Synthroid",
+    "active_salt": "Levothyroxine",
+    "uses": "Hypothyroidism, thyroid hormone replacement",
+    "interactions": [
+      { "interacting_drug_salt": "Acetylsalicylic acid", "severity": "Moderate", "description": "High-dose Aspirin may displace Levothyroxine from binding proteins, altering free hormone levels." },
+      { "interacting_drug_salt": "Ciprofloxacin hydrochloride", "severity": "Low", "description": "Fluoroquinolones may impair Levothyroxine absorption when taken simultaneously." },
+      { "interacting_drug_salt": "Warfarin sodium", "severity": "Moderate", "description": "Levothyroxine can enhance Warfarin's anticoagulant effects." }
+    ]
+  },
+  {
+    "name": "Ventolin",
+    "active_salt": "Albuterol",
+    "uses": "Asthma, bronchospasm, COPD rescue treatment",
+    "interactions": [
+      { "interacting_drug_salt": "Atenolol", "severity": "High", "description": "Beta-blockers like Atenolol can block bronchodilator effects of Albuterol, worsening asthma." },
+      { "interacting_drug_salt": "Furosemide", "severity": "Moderate", "description": "Both agents can cause hypokalemia; monitor potassium levels." },
+      { "interacting_drug_salt": "Digoxin", "severity": "Moderate", "description": "Albuterol can lower potassium, increasing Digoxin toxicity risk." }
+    ]
+  },
+  {
+    "name": "Zyrtec",
+    "active_salt": "Cetirizine",
+    "uses": "Allergic rhinitis, hives, allergic reactions",
+    "interactions": [
+      { "interacting_drug_salt": "Sertraline hydrochloride", "severity": "Low", "description": "Combined CNS depressant effects may cause increased sedation." },
+      { "interacting_drug_salt": "Ciprofloxacin hydrochloride", "severity": "Low", "description": "Ciprofloxacin may slightly increase Cetirizine plasma levels." }
+    ]
+  },
+  {
+    "name": "Ultram",
+    "active_salt": "Tramadol",
+    "uses": "Moderate to severe pain management",
+    "interactions": [
+      { "interacting_drug_salt": "Sertraline hydrochloride", "severity": "High", "description": "Risk of serotonin syndrome — a potentially life-threatening condition causing agitation, confusion, and rapid heart rate." },
+      { "interacting_drug_salt": "Warfarin sodium", "severity": "Moderate", "description": "Tramadol may enhance Warfarin's anticoagulant effect." }
+    ]
+  },
+  {
+    "name": "Aldactone",
+    "active_salt": "Spironolactone",
+    "uses": "Heart failure, high blood pressure, hyperaldosteronism, edema",
+    "interactions": [
+      { "interacting_drug_salt": "Lisinopril", "severity": "High", "description": "Dual potassium-sparing effect significantly increases risk of dangerous hyperkalemia." },
+      { "interacting_drug_salt": "Ibuprofen", "severity": "Moderate", "description": "NSAIDs can reduce the diuretic effect of Spironolactone and worsen kidney function." }
+    ]
+  },
+  {
+    "name": "Cordarone",
+    "active_salt": "Amiodarone",
+    "uses": "Ventricular arrhythmias, atrial fibrillation",
+    "interactions": [
+      { "interacting_drug_salt": "Digoxin", "severity": "High", "description": "Amiodarone significantly inhibits Digoxin clearance; Digoxin dose must be halved." },
+      { "interacting_drug_salt": "Warfarin sodium", "severity": "High", "description": "Amiodarone potently inhibits Warfarin metabolism; INR can double or triple." },
+      { "interacting_drug_salt": "Simvastatin", "severity": "High", "description": "Amiodarone inhibits statin metabolism, increasing myopathy risk; Simvastatin dose capped at 20mg." }
     ]
   }
 ]
